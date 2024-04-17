@@ -1,0 +1,887 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=M+PLUS+1+Code:wght@100..700&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* font-family: "Nanum Gothic", sans-serif;
+font-family: "M PLUS 1 Code", monospace; */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sa;
+}
+#head {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 80px;
+  background-color: #987e32;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar a {
+  text-decoration: none;
+  color: #ffff;
+  font-weight: 700;
+}
+#cross {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    font-size: 2rem;
+    display: none;
+}
+
+.getIn{
+    width: 120px;
+  padding: 2px 7px;
+  background-color: rgb(255, 98, 0);
+  font-family: "M PLUS 1 Code", monospace;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  left: 15px;
+  cursor: pointer;
+  display: none;
+}
+#head-bar {
+    font-size: 1rem;
+    display: none;
+}
+#logo-cir,#logo-cir2 {
+    width: 130px;
+    height: 130px;
+  border-radius: 50%;
+  background-color: #987e32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#logo-cir2 {
+    display: none;
+}
+#logo-cir img ,#logo-cir2 img {
+  margin-top: 25%;
+  width: 100px;
+  background-size: cover;
+}
+
+/* making the hero photo of web */
+
+#hero {
+  background-image: url("img/hero.png");
+  background-size: cover;
+  background-position: top 25% right 2%;
+  width: 100%;
+  height: 80vh;
+}
+#hero {
+  opacity: 0;
+}
+#hero.animate__animated,
+#hero.animate__animated {
+  opacity: 1;
+}
+/* making main part of the page */
+.about-hot {
+  width: 100%;
+  margin-top: 50px;
+  background-image: url("img/background.webp");
+  background-size: cover;
+  padding: 80px 5%;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+}
+.hot-text {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.about-hot .hot-text h1 {
+  font-size: 3rem;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+}
+.hot-text h1 p {
+  display: inline;
+  color: goldenrod;
+  font-family: "Lobster", sans-serif;
+}
+.hot-text P {
+  margin: 15px 5%;
+
+  font-family: "Prompt", sans-serif;
+}
+.hot-image {
+  margin-left: 4%;
+  border: 4px solid white;
+  width: 40%;
+  min-width: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hot-image,
+.hot-image2,
+.hot-text {
+  opacity: 0;
+}
+.hot-image.animate__animated,
+.hot-image2.animate__animated,
+.hot-text.animate__animated {
+  opacity: 1;
+}
+.about-hot .hot-image img {
+  width: 90%;
+  height: 90%;
+}
+.hot-image2 {
+  margin-top: 60px;
+  width: 20%;
+  min-width: 250px;
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
+.about-hot .hot-image2 img {
+  width: 90%;
+  height: 90%;
+}
+
+/* maing scroll gaallery */
+
+#gallery-box {
+  width: 100%;
+  padding: 120px 5%;
+}
+.gallery {
+  opacity: 0;
+}
+.gallery.animate__animated {
+  opacity: 1;
+}
+.gallery {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+}
+.gallery div img {
+  width: 230px;
+  height: 230px;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+.gallery div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 4px;
+}
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+.gallery-btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-btn img {
+  margin: 0 10%;
+  width: 40px;
+  cursor: pointer;
+}
+.gallery img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+/** makibg facalites sectiono **/
+.facalities {
+  width: 100%;
+  display: flex;
+  padding: 50px 5%;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f9f6ec;
+}
+.facalities,
+.facalites-text,
+.facalites-img {
+  opacity: 0;
+}
+.facalities.animate__animated,
+.facalites-text .hot-text.animate__animated,
+.facalites-img.animate__animated {
+  opacity: 1;
+}
+.facalites-text h1,
+.facalities-text p {
+  font-family: "M PLUS 1 Code", monospace;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.facalites-text {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.facalites-text .facalities1 {
+  width: 100%;
+  padding: 12px;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.584);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.facalites-text .facalities1 h2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.facalites-text .facalities1 img {
+  width: 20px;
+}
+.facalites-img {
+  width: 28%;
+  min-width: 200px;
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 4px;
+  border: 2px solid goldenrod;
+  border-right: 80%;
+  border-left: none;
+  border-bottom: none;
+}
+.facalites-img img {
+  width: 94%;
+}
+.facalites-img h5 {
+  margin: 10px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* making rommes facalites  */
+.facalites-2 {
+  width: 100%;
+}
+
+.facalites-2-text {
+  width: 40%;
+  margin: 5% 18%;
+}
+.facalites-2-text {
+  opacity: 0;
+}
+.facalites-2-text.animate__animated {
+  opacity: 1;
+}
+.facalites-2 h2 {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  margin-top: 10px;
+}
+.facalites-2 h2 P {
+  display: inline;
+  color: goldenrod;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+}
+.facalites-2-image {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px 10% 20px;
+}
+.facalites-2img {
+  text-transform: uppercase;
+  font-family: "M PLUS 1 Code", monospace;
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  color: #fff;
+  margin-top: 5px;
+  box-shadow: 40px 40px 54px rgba(0, 0, 0, 0.03);
+}
+
+#fa-1 {
+  width: 200px;
+  height: 200px;
+  box-shadow: 40px 40px 54px rgba(0, 0, 0, 0.03);
+  background-image: url("img/facalites/13.jpg");
+  background-size: cover;
+}
+#fa-2 {
+  width: 200px;
+  height: 200px;
+  background-image: url("img/facalites/14.webp");
+  background-size: cover;
+}
+#fa-3 {
+  width: 200px;
+  height: 200px;
+  background-image: url("img/facalites/15.webp");
+  background-size: cover;
+  color: goldenrod;
+}
+#fa-4 {
+  width: 200px;
+  height: 200px;
+  background-image: url("img/facalites/16.jpg");
+  background-size: cover;
+}
+.facalites-2img {
+  opacity: 0;
+}
+.facalites-2img.animate__animated {
+  opacity: 1;
+}
+/* costomisng demo video */
+
+.demo-ve {
+  width: 100%;
+  margin-top: 80px;
+}
+.demo-ve {
+  opacity: 0;
+}
+.demo-ve.animate__animated {
+  opacity: 1;
+}
+.demo-ve video {
+  width: 100%;
+  background-size: cover;
+}
+#services {
+  width: 100%;
+  padding: 50px 20%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#services {
+  opacity: 0;
+}
+#services.animate__animated {
+  opacity: 1;
+}
+#services div {
+  display: flex;
+  margin: 10px 3%;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "M PLUS 1 Code", monospace;
+}
+#services div h4 {
+  padding-left: 5px;
+}
+.about2 {
+  width: 100%;
+  margin-top: 50px;
+  background-image: url("img/background.webp");
+  background-size: cover;
+  padding: 80px 5%;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.about2,
+.about-image,
+.hot-text2 {
+  opacity: 0;
+}
+.about2.animate__animated,
+.about-image.animate__animated,
+.hot-text2.animate__animated {
+  opacity: 1;
+}
+.about-image {
+  margin-left: 4%;
+  border: 4px solid white;
+  width: 40%;
+  min-width: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  rotate: x;
+}
+.about-image img {
+  width: 90%;
+  height: 100%;
+}
+.about2 .hot-text2 {
+  width: 40%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.hot-text2 p {
+  font-family: "M PLUS 1 Code", monospace;
+  font-size: 0.9rem;
+}
+.about2 .hot-text2 h1 {
+  font-size: 3rem;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+}
+.about2 .hot-text2 h1 p {
+  margin-left: 4px;
+  font-size: 3rem;
+  display: inline;
+  color: goldenrod;
+  font-family: "Lobster", sans-serif;
+}
+
+/* last image of the page */
+
+#last-image {
+  width: 100%;
+  margin-top: 80px;
+}
+#last-image {
+  opacity: 0;
+}
+#last-image.animate__animated {
+  opacity: 1;
+}
+#last-image img {
+  width: 100%;
+}
+
+/* get in touch image with border */
+
+.get-touch {
+  width: 100%;
+  border-bottom: 20px solid #afbdc6;
+  position: relative;
+}
+.get-touch img {
+  width: 100%;
+  background-size: cover;
+}
+.get-touch a button {
+  padding: 5px 10px;
+  background-color: rgb(255, 98, 0);
+  font-family: "M PLUS 1 Code", monospace;
+  border-radius: 4px;
+  border: none;
+  font-size: 1.3rem;
+  color: white;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  cursor: pointer;
+}
+
+/* /** making last part of page */
+
+.footer {
+  width: 100%;
+  background-color: #2e2e2e;
+}
+.foot-1 {
+  width: 100%;
+  height: 60px;
+  box-sizing: content-box;
+  border-top: 20px solid #dac68c;
+}
+.foot-2 {
+  padding: 0 15%;
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.foot-3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20%;
+}
+#foot-logo img {
+  width: 200px;
+}
+.foot-3 div {
+  margin-left: 5%px;
+  width: 35%;
+}
+#address p {
+  color: #fff;
+  margin-top: 20pxS;
+  padding: 5px;
+  font-family: "M PLUS 1 Code", monospace;
+}
+#get a {
+  margin-top: 20px;
+  color: #987e32;
+}
+#get i {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-left: 3px;
+  padding: 2px 3px;
+  border: 1px solid #987e32;
+}
+#get h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.foot-3 h2 {
+  color: #987e32;
+}
+
+/* copyright fragments */
+
+.copyright {
+  font-family: "M PLUS 1 Code", monospace;
+  width: 100%;
+  display: flex;
+  height: 20px;
+  border-top: 1px solid white;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-size: 0.6rem;
+  border-width: 50%;
+}
+
+/* -------------------------------making website reponsive ------------------------------- */
+
+@media (max-width: 1100px) {
+  .hot-image img {
+    height: 40vh;
+    background-size: cover;
+    min-width: 300px;
+  }
+  .about-hot .hot-text h1 {
+    font-size: 2.2rem;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+  }
+  .gallery div {
+    grid-template-columns: auto auto auto auto auto;
+  }
+  .gallery div img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* making responsive forr tablet */
+
+@media (max-width: 790px) {
+  #head {
+    padding: 4px 30px;
+  }
+  #hero {
+    background-image: url("img/background2.jpg");
+    height: 80vh;
+    background-size: cover;
+  }
+  .about-hot {
+    padding: 30px 2%;
+  }
+  .hot-text {
+    width: 35%;
+  }
+  .about-hot .hot-text h1 {
+    font-size: 2.2rem;
+  }
+  .hot-text h1 p {
+    font-size: 2.2rem;
+  }
+  .hot-text P {
+    font-size: 0.8rem;
+  }
+  .hot-image2 {
+    right: -5%;
+  }
+  .facalites-2-image {
+    padding-left: 5%;
+    padding-top: 5px;
+    margin: 5px 10% 20px 10px;
+  }
+  #services {
+    width: 100%;
+    padding: 30px 10%;
+  }
+  #services h4 {
+    padding-left: 3px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .about-image {
+    margin-left: 4%;
+    margin-right: 20px;
+    border: 2px solid white;
+    width: 40%;
+    min-width: 320px;
+  }
+  .about2 .hot-text2 h1 {
+    font-size: 2.2rem;
+  }
+  .hot-text2 p {
+    font-size: 0.8rem;
+  }
+  .get-touch a button {
+    bottom: 5%;
+  }
+  .foot-3 {
+    padding: 0 10%;
+  }
+  #address p {
+    font-size: 0.8rem;
+    color: #fff;
+    margin-top: 10px;
+    padding: 5px;
+    font-family: "M PLUS 1 Code", monospace;
+  }
+  #get i {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 2px 2px;
+    border: 1px solid #987e32;
+  }
+  #get {
+    width: 40%;
+  }
+
+}
+/* makin website responsie for mobile
+ */
+@media (max-width: 430px) {
+  #head {
+    padding: relatives;
+  }
+  .navbar {
+    width: 48%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: -300;
+    height: 100vh;
+    background-color: #e3e6f3;
+    box-shadow: 0 60px 40px rgba(0, 0, 0, 0.03);
+    padding-top: 90px;
+    padding-left: 50px;
+    transition: .4s;
+  }
+  .navbar.active {
+    left: 0;
+  }
+  #head-bar {
+    display: flex;
+    }
+    #head-bar i {
+        font-size: 1.5rem;
+    }
+  .navbar a {
+    color: rgba(0, 0, 0, 0.962);
+    margin-top: 25px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  #cross {
+    display: flex;
+  }
+    .getIn{
+    display: flex;
+    }
+  #logo-cir {
+    display: none;
+  }
+  #logo-cir2 {
+    display: flex;
+  }
+
+  #hero {
+    background-image: url("img/background3.png");
+    height: 60vh;
+    background-size: cover;
+  }
+  .about-hot .hot-text h1 {
+    font-size: 1.5rem;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+}
+.hot-text h1 p {
+    font-size: 1.5rem;
+  }
+  .about-hot {
+    padding: 30px 10px;
+}
+.hot-text {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hot-image {
+    margin-left: 4%;
+    border: 4px solid white;
+    width: 80%;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.hot-image img {
+    width: 100%;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+.hot-image2 {
+    top: 45%;
+    right: -5%;
+    border: 2px solid gold;
+}
+.hot-text {
+    width: 80%;
+}
+.facalites-text .facalities1 h2 {
+    font-size: 0.7rem;
+
+}
+.facalites-text .facalities1 img {
+    width: 15px;
+}
+.facalites-text h1, .facalities-text p {
+    font-family: "M PLUS 1 Code", monospace;
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.facalites-img {
+    width: 28%;
+    min-width: 150px;
+    border-right: 80%;
+    margin-left: 20px;
+}
+.facalites-2 h2 {
+    font-size: 1.7rem;
+    margin-top: 10px;
+}
+.facalites-2-image {
+    padding-left: 14%;
+    padding-top: 5px;
+    margin: 5px 10% 20px 10px;
+}
+.facalites-2img {
+    margin-top: 10px;
+}
+.about2 .hot-text2 {
+    width: 80%;
+    margin-top: 20px;
+}
+.about2 .hot-text2 h1 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+.about2 .hot-text2 h1 p {
+    font-size:1.7rem;
+}
+.get-touch a button {
+    font-size: 0.8rem;
+    padding: 2px 3px;
+    bottom: 3%;
+    left: 3px;
+    cursor: pointer;
+}
+.foot-3 {
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px 10%;
+}
+.foot-3 div {
+    margin-left: 5%px;
+    width: 80%;
+}
+#get {
+    width: 80%;
+}
+.copyright {
+    display: flex;
+    height: 100px;
+    border-top: 1px solid white;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-size: 0.6rem;
+    border-width: 50%;
+}
+.foot-2 {
+    padding: 0 5px;
+}
+.foot-2 a{
+    font-size: 0.7rem;
+}
+.gallery div img {
+    width: 160px;
+    height: 160px;
+}
+
+}
+@media (max-width:325px) {
+    .hot-image2 {
+        top: 50%;
+    }
+}
